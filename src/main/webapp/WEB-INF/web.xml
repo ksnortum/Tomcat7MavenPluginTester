@@ -5,18 +5,26 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 						http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
+	<!-- Startup Vaadin app -->
 	<servlet>
 		<servlet-name>myservlet</servlet-name>
 		<servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class>
-		
+
 		<init-param>
 			<param-name>application</param-name>
 			<param-value>com.catalystitservices.vaadin.TestApp</param-value>
 		</init-param>
 	</servlet>
-	
+
 	<servlet-mapping>
-	    <servlet-name>myservlet</servlet-name>
-	    <url-pattern>/*</url-pattern>
+		<servlet-name>myservlet</servlet-name>
+		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
+
+	<!-- Vaadin production mode -->
+	<context-param>
+		<description>Vaadin production mode</description>
+		<param-name>productionMode</param-name>
+		<param-value>${production.mode}</param-value>
+	</context-param>
 </web-app>
