@@ -9,11 +9,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	
-	<!-- Use properties to control production code in web.xml -->
-	<properties>
-		<production.mode>false</production.mode>
-	</properties>
-	
 	<build>
 		<plugins>
 			<plugin>
