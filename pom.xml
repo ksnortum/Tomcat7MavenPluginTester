@@ -43,6 +43,10 @@
 				<version>2.2</version>
 				
 				<configuration>
+					<filters>
+            			<filter>test-app.properties</filter>
+          			</filters>
+          			
 					<packagingExcludes>WEB-INF/web.xml</packagingExcludes>
 					<warName>test-app</warName>
 					
