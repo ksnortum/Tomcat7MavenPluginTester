@@ -10,6 +10,8 @@
 	<packaging>war</packaging>
 	
 	<build>
+		<finalName>plugin-tester</finalName>
+		
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -33,7 +35,14 @@
 					<port>9090</port>
 					
 					<!-- application path always starts with / -->
-					<path>/test-app</path>
+					<path>/${project.build.finalName}</path>
+					
+					<!-- Have Tomcat look in the file filtering folder -->
+					<!-- Uncomment this to get the correct behavior
+					<warSourceDirectory>
+						
+					</warSourceDirectory>
+					-->
 				</configuration>
 			</plugin>
 			
@@ -48,7 +57,6 @@
           			</filters>
           			
 					<packagingExcludes>WEB-INF/web.xml</packagingExcludes>
-					<warName>test-app</warName>
 					
 					<webResources>
 						<resource>
