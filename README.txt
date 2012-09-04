@@ -69,7 +69,7 @@ and you use Maven filtering, how can you test your war file?
 The Fix (update)
 ----------------
 
-Okay, it's not a but per se.  What is happening is that Maven Filtering makes
+Okay, it's not a bug per se.  What is happening is that Maven Filtering makes
 its changes in a directory that Maven Tomcat doesn't look at.  But you can tell
 Tomcat where the directory with the filtered files is.
 
