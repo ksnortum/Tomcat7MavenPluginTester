@@ -14,8 +14,8 @@ How to Run
 2. download maven if necessary
 3. setup maven to work at the command line
 4. cd to the project folder (the one with the pom.xml file in it)
-5. type "mvn clean install tomcat7:run"
-6. open a browser and type in the URL http://localhost:9090/test-app
+5. type `mvn clean install tomcat7:run`
+6. open a browser and type in the URL (http://localhost:9090/test-app)
 
 Things to Notice
 ----------------
